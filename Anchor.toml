@@ -1,0 +1,12 @@
+[programs.localnet]
+aggieshell = "HbUJHkcG4C6BZMdGxRiVtqTBJPzww7fjMmdRAfJhwjs7"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/lzx/.config/solana/id.json"
+
+[scripts]
+test = "mocha -t 1000000 tests/"
