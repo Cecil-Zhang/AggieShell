@@ -1,0 +1,18 @@
+[package]
+name = "aggieshell"
+version = "0.1.0"
+description = "A decentralized platform for student start-ups funding"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "aggieshell"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.18.0"
