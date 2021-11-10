@@ -2,36 +2,64 @@ import React from "react";
 
 // components
 
-import CardLineChart from "components/Cards/CardLineChart.js";
-import CardBarChart from "components/Cards/CardBarChart.js";
-import CardPageVisits from "components/Cards/CardPageVisits.js";
-import CardSocialTraffic from "components/Cards/CardSocialTraffic.js";
+import CardProjPre from "components/Cards/CardProjPre";
 
 // layout for page
 
-import Admin from "layouts/Admin.js";
+import MainBoard from "layouts/MainBoard.js";
 
 export default function Dashboard() {
+  const mockData = [
+    {
+      'projectName': 'Project 1',
+    },
+    {
+      'projectName': 'Project 2',
+    },
+    {
+      'projectName': 'Project 3',
+    },
+    {
+      'projectName': 'Project 4',
+    },
+    {
+      'projectName': 'Project 5',
+    },
+    {
+      'projectName': 'Project 6',
+    },
+    {
+      'projectName': 'Project 7',
+    },
+    {
+      'projectName': 'Project 8',
+    },
+    {
+      'projectName': 'Project 9',
+    },
+  ]
   return (
     <>
       <div className="flex flex-wrap">
-        <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-          <CardLineChart />
+        {
+          mockData.map(item => (
+            <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
+              <CardProjPre ProjectName={item.projectName} />
+            </div>
+          ))
+        }
+        {/* <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
+          <CardProjPre ProjectName="Project 1" />
         </div>
-        <div className="w-full xl:w-4/12 px-4">
-          <CardBarChart />
+        <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
+          <CardProjPre ProjectName="Project 2" />
         </div>
-      </div>
-      <div className="flex flex-wrap mt-4">
-        <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-          <CardPageVisits />
-        </div>
-        <div className="w-full xl:w-4/12 px-4">
-          <CardSocialTraffic />
-        </div>
+        <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
+          <CardProjPre ProjectName="Project 3" />
+        </div> */}
       </div>
     </>
   );
 }
 
-Dashboard.layout = Admin;
+Dashboard.layout = MainBoard;
