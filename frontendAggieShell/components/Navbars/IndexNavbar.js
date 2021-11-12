@@ -11,12 +11,8 @@ export default function Navbar(props) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a
-<<<<<<< HEAD
                 className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 mt-3 whitespace-nowrap uppercase"
-                href="#pablo"
-=======
-                className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block align-middle mr-4 py-2 whitespace-nowrap uppercase"
->>>>>>> 73fa673f5892b879721d6c126fbfec13e3154692
+                href="#pablo" className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block align-middle mr-4 py-2 whitespace-nowrap uppercase"
               >
                 <img className="inline-block align-middle float-left w-6" src="img/brand/CowLogo.png" />
                 <span className="inline-block align-middle float-left">AggieShell</span>
