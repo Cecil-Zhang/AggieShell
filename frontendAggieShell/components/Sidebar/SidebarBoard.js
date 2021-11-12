@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Modal } from 'antd';
+import { Modal, Button, Form, Input, InputNumber, DatePicker } from 'antd';
 
 
 import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
@@ -11,6 +11,20 @@ export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   const router = useRouter();
   const [showModal, setShowModal] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const handleOk = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setShowModal(false);
+    }, 3000);
+  };
+  const handleCancel = () => {
+    setShowModal(false);
+  };
+  const onChange = e => {
+    console.log('Change:', e.target.value);
+  };
   return (
     <>
       <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
@@ -29,7 +43,8 @@ export default function Sidebar() {
               href="#pablo"
               className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             >
-              Aggie Shell
+              <img className="inline-block align-middle float-left w-6" src="/img/brand/CowLogo.png" />
+              <span className="inline-block align-middle float-left">AggieShell</span>
             </a>
           </Link>
           {/* User */}
@@ -57,7 +72,7 @@ export default function Sidebar() {
                       href="#pablo"
                       className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     >
-                      Aggie Shell
+                      AggieShell
                     </a>
                   </Link>
                 </div>
@@ -177,13 +192,59 @@ export default function Sidebar() {
         title="Creat a New Project"
         centered
         visible={showModal}
-        onOk={() => setShowModal(false)}
-        onCancel={() => setShowModal(false)}
+        onOk={handleOk}
+        onCancel={handleCancel}
         width={'60%'}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Cancel
+          </Button>,
+          <Button key="submit" type="primary" loading={loading} onClick={handleOk}>
+            Confirm
+          </Button>,
+        ]}
       >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
+        <Form
+          name="create new"
+          labelCol={{ span: 8 }}
+          wrapperCol={{ span: 16 }}
+        >
+          <Form.Item
+            label="Project Name"
+            name="projectName"
+            rules={[{ required: true, message: 'Please input your project name!' }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Brief Introduction"
+            name="briefIntro"
+            rules={[{ required: true, message: 'Please input one line of introduction!' }]}
+          >
+            <Input placeholder="one line of introduction"/>
+          </Form.Item>
+          <Form.Item
+            label="Total funds Needed(in $USD)"
+            name="total"
+            rules={[{ required: true, message: 'Please input how much funds you need!' }]}
+          >
+            <InputNumber />
+          </Form.Item>
+          <Form.Item
+            label="Due Date"
+            name="due"
+            rules={[{ required: true, message: 'Please pick the due date' }]}
+          >
+            <DatePicker />
+          </Form.Item>
+          <Form.Item
+            label="Project Details"
+            name="details"
+            rules={[{ required: true, message: 'Please input details of your project!' }]}
+          >
+            <Input.TextArea showCount maxLength={3000} placeholder="No more than 3000 words" onChange={onChange} />
+          </Form.Item>
+        </Form>
       </Modal>
     </>
   );

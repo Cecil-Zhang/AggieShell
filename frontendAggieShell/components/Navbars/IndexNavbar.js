@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 // components
 
-import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
-
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -13,10 +11,15 @@ export default function Navbar(props) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a
+<<<<<<< HEAD
                 className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 mt-3 whitespace-nowrap uppercase"
                 href="#pablo"
+=======
+                className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block align-middle mr-4 py-2 whitespace-nowrap uppercase"
+>>>>>>> 73fa673f5892b879721d6c126fbfec13e3154692
               >
-                AggieShell
+                <img className="inline-block align-middle float-left w-6" src="img/brand/CowLogo.png" />
+                <span className="inline-block align-middle float-left">AggieShell</span>
               </a>
             </Link>
             <button
@@ -34,7 +37,7 @@ export default function Navbar(props) {
             }
             id="example-navbar-warning"
           >
-            <ul className="flex flex-col lg:flex-row list-none mr-auto">
+            <ul className="flex flex-col lg:flex-row list-none mr-auto mb-0">
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -45,7 +48,7 @@ export default function Navbar(props) {
                 </a>
               </li>
             </ul>
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto mb-0">
 
               <li className="flex items-center">
                 <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/">
