@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Tabs from "components/Tabs.js";
 
 export default function Index() {
   return (
@@ -96,13 +97,11 @@ export default function Index() {
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                    Great for your awesome project
+                    Smart Contracts built on Solana
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                    Putting together a page has never been easier than matching
-                    together pre-made components. From landing pages
-                    presentation to login areas, you can easily customise and
-                    built your pages.
+                    The Solana chain is one of the fastest scalable and user-friendly
+                    permissionless blockchains with high-throughput low-cost transactions.
                   </p>
                 </blockquote>
               </div>
@@ -117,11 +116,12 @@ export default function Index() {
                         <i className="fas fa-sitemap"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        CSS Components
+                        Solana Chain
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        Notus NextJS comes with a huge number of Fully Coded CSS
-                        components.
+                      The Solana chain is one of the fastest scalable and user-friendly
+                      permissionless blockchains, offerring up to 710,000 TPS
+                      and $0.00025 per transaction.
                       </p>
                     </div>
                   </div>
@@ -131,11 +131,11 @@ export default function Index() {
                         <i className="fas fa-drafting-compass"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        JavaScript Components
+                        Wallet
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        We also feature many dynamic components for React,
-                        NextJS, Vue and Angular.
+                      Our platform uses Phantom wallet, a simple way to transfer
+                      funds on the AggieShell platform.
                       </p>
                     </div>
                   </div>
@@ -146,10 +146,13 @@ export default function Index() {
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-newspaper"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">Pages</h6>
+                      <h6 className="text-xl mb-1 font-semibold">
+                        Smart Contracts
+                      </h6>
                       <p className="mb-4 text-blueGray-500">
-                        This extension also comes with 3 sample pages. They are
-                        fully coded so you can start working instantly.
+                        Smart contracts are deployed and tested using Rust, a language
+                        similar to C++, and allow
+                        for users to be refunded if funding threshold is not met.
                       </p>
                     </div>
                   </div>
@@ -159,11 +162,11 @@ export default function Index() {
                         <i className="fas fa-file-alt"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        Documentation
+                        Aggie Coin
                       </h6>
                       <p className="mb-4 text-blueGray-500">
-                        Built by developers for developers. You will love how
-                        easy is to to work with Notus NextJS.
+                        Transactions and funding on the Aggie Shell platform is done
+                        through Aggie Coin, a crypto specifically made for our app.
                       </p>
                     </div>
                   </div>
