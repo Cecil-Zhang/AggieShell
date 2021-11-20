@@ -1,1 +1,1 @@
-# AggieShell
+Integrate Phantom wallet into [solana-crowdfunding-tutorial](https://github.com/figment-networks/learn-tutorials/blob/d1dddd441287e8b8a5ea9888705b1628f7aa69e3/solana/solana-crowdfund-tutorial.md)
