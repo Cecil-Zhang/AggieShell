@@ -34,7 +34,11 @@ const Card = ({ data, setCards }) => {
                     <div>
                         <span>Raised: {data.amount}</span>
                     </div>
+                    <div>
+                        <span>Target: {data.target}</span>
+                    </div>
                     <p>{data.description}</p>
+                    <p>{data.long_description}</p>
 
                     <form className="ui form container">
                         <div className="ui grid">

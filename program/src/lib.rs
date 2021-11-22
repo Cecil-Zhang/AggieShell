@@ -47,8 +47,10 @@ struct CampaignDetails {
     pub admin: Pubkey,
     pub name: String,
     pub description: String,
+    pub long_description: String,
     pub image_link: String,
     pub amount_donated: u64,
+    pub target: u64,
 }
 
 fn create_campaign(
@@ -115,6 +117,12 @@ fn withdraw(
         msg!("Only the account admin can withdraw");
         return Err(ProgramError::InvalidAccountData);
     }
+
+    if campaign_data.target > campaign_data.amount_donated {
+        msg!("Only successful campaign can withdraw");
+        return Err(ProgramError::InvalidAccountData);
+    }
+
     let input_data = WithdrawRequest::try_from_slice(&instruction_data)
         .expect("Instruction data serialization didn't worked");
 

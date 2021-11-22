@@ -27,6 +27,8 @@ const App = () => {
                 description: e.description,
                 amount: (e.amount_donated).toString(),
                 image: e.image_link,
+                long_description: e.long_description,
+                target: e.target.toNumber(),
                 id: e.pubId,
               }}
               setCards={setCards} />

@@ -10,10 +10,11 @@ import { deserialize, serialize } from "borsh";
 import { getProvider } from "../components/Phantom";
 
 const cluster = "https://api.devnet.solana.com";
+// const cluster = "http://localhost:8899";
 const connection = new Connection(cluster, "confirmed");
 var wallet = getProvider();
 const programId = new PublicKey(
-    "286rapsUbvDe1ZgBeNhp37YHvEPwWPTr4Bkce4oMpUKT"
+    "6AvDjmvsamYGz7gDpXLa5PcRtvokNHUJWDuwsAMRaTtJ"
 );
 
 
@@ -57,8 +58,10 @@ class CampaignDetails {
                 ['admin', [32]],
                 ['name', 'string'],
                 ['description', 'string'],
+                ['long_description', 'string'],
                 ['image_link', 'string'],
-                ['amount_donated', 'u64']]
+                ['amount_donated', 'u64'],
+                ['target', 'u64']]
         }]]);
 }
 
@@ -71,7 +74,7 @@ async function checkWallet() {
 }
 
 export async function createCampaign(
-    name, description, image_link
+    name, description, long_description, image_link, target
 ) {
     await checkWallet();
 
@@ -85,9 +88,11 @@ export async function createCampaign(
     let campaign = new CampaignDetails({
         name: name,
         description: description,
+        long_description: long_description,
         image_link: image_link,
         admin: wallet.publicKey.toBuffer(),
-        amount_donated: 0
+        amount_donated: 0,
+        target: target
     })
 
     let data = serialize(CampaignDetails.schema, campaign);
@@ -134,9 +139,11 @@ export async function getAllCampaigns() {
                 pubId: e.pubkey,
                 name: campData.name,
                 description: campData.description,
+                long_description: campData.long_description,
                 image_link: campData.image_link,
                 amount_donated: campData.amount_donated,
                 admin: campData.admin,
+                target: campData.target,
             });
         } catch (err) {
             console.log(err);
