@@ -10,6 +10,7 @@ export default function CardProjPre({
   ProjectFullDes,
   ProjectRaisedAmount,
   ProjectTotalAmount,
+  ProjectOnGoing
 }) {
   const [showDetails, setShowDetails] = React.useState(false);
   const [donateAmount, setDonateAmount] = React.useState(0);
@@ -33,9 +34,25 @@ export default function CardProjPre({
       window.location.reload();
     }
   }
-  const onChange = (value) => {
+  const handleWithdraw = async () => {
+    setLoading(true);
+    try {
+      await withdraw(ProjectID, ProjectRaisedAmount);
+      setLoading(false);
+      alert('Withdraw successful!');
+      if (typeof window !== 'undefined') {
+        window.location.reload();
+      }
+    } catch (e) {
+      setLoading(false);
+      console.log(e);
+      alert("failed to withdraw, are you the owner of this project?");
+    }
+  }
+  const onChangeDonate = (value) => {
     setDonateAmount(value);
   }
+
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
@@ -107,25 +124,31 @@ export default function CardProjPre({
             </div>
             <h3>Total Funds Need: {ProjectTotalAmount}</h3>
             <h3>Current Raised: {ProjectRaisedAmount}</h3>
-            <Input.Group compact>
-              <InputNumber
-                style={{width:'60%'}}
-                placeholder="Donate in SOL"
-                onChange={onChange}
-              />
-              <Button type="primary" loading={loading} onClick={handleDonate}>Donate</Button>
-            </Input.Group>
+            {ProjectOnGoing !== 0 ? 
+              <>
+              <Input.Group compact>
+                <InputNumber
+                  style={{width:'60%'}}
+                  placeholder="Donate in SOL"
+                  onChange={onChangeDonate}
+                />
+                <Button type="primary" loading={loading} onClick={handleDonate}>Donate</Button>
+              </Input.Group>
+              {ProjectRaisedAmount >= ProjectTotalAmount ?
+              <>
+              <br />
+              <Button type="primary" loading={loading} onClick={handleWithdraw}>Withdraw All</Button>
+              <br />
+              </>:null
+              }   
+              </>:null
+            }
             <br />
           </div>
           <div className="w-full xl:w-8/12 px-4 m-auto text-center">
             <p> Brief Discription: <span style={{'fontWeight': 'bold'}}>{ProjectSimpleDes}</span> </p>
             <h3> Project Details </h3>
-            <p> lines of project details </p>
-            <p> lines of project details </p>
-            <p> lines of project details </p>
-            <p> lines of project details </p>
-            <p> lines of project details </p>
-            <p> lines of project details </p>
+            <p> {ProjectFullDes} </p>
           </div>
         </div>
       </div>

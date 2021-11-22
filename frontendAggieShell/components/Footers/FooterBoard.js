@@ -11,7 +11,7 @@ export default function FooterBoard() {
               <div className="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
                 Copyright © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.creative-tim.com?ref=nnjs-footer-admin"
+                  href="/"
                   className="text-blueGray-500 hover:text-blueGray-700 text-sm font-semibold py-1"
                 >
                   Aggie Shell
@@ -22,7 +22,7 @@ export default function FooterBoard() {
               <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
                   <a
-                    href="https://www.creative-tim.com?ref=nnjs-footer-admin"
+                    href="/"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                   >
                     Aggie Shell
@@ -30,7 +30,7 @@ export default function FooterBoard() {
                 </li>
                 <li>
                   <a
-                    href="https://www.creative-tim.com/presentation?ref=nnjs-footer-admin"
+                    href="/about"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                   >
                     About Us
@@ -38,7 +38,7 @@ export default function FooterBoard() {
                 </li>
                 <li>
                   <a
-                    href="http://blog.creative-tim.com?ref=nnjs-footer-admin"
+                    href="https://github.com/Cecil-Zhang/AggieShell"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                   >
                     GitHub
@@ -46,7 +46,7 @@ export default function FooterBoard() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/creativetimofficial/notus-nextjs/blob/main/LICENSE.md?ref=nnjs-footer-admin"
+                    href="https://github.com/Cecil-Zhang/AggieShell"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                   >
                     MIT License

@@ -28,8 +28,10 @@ export default function Dashboard() {
                 ProjectID={item.pubId}
                 ProjectName={item.name} 
                 ProjectSimpleDes={item.description}
+                ProjectFullDes={item.long_description}
                 ProjectRaisedAmount={parseInt(item.amount_donated.toString())}
-                ProjectTotalAmount={10000}
+                ProjectTotalAmount={parseInt(item.target.toString())}
+                ProjectOnGoing={parseInt(item.ongoing.toString())}
               />
             </div>
           ))

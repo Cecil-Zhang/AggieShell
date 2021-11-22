@@ -15,9 +15,14 @@ export default function Sidebar() {
   const [projectName, setProjectName] = React.useState("");
   const [simpleDes, setSimpleDes] = React.useState("");
   const [fullDes, setFullDes] = React.useState("");
+  const [target, setTarget] = React.useState(0);
   const handleOk = async () => {
     setLoading(true);
-    await createCampaign(projectName, simpleDes, "");
+    if (target === 0) {
+      console.log("target is 0");
+      return
+    }
+    await createCampaign(projectName, simpleDes, fullDes, "", target, 1);
     setLoading(false);
     setShowModal(false);
     if (typeof window !== 'undefined') {
@@ -35,6 +40,10 @@ export default function Sidebar() {
   };
   const onFullDesChange = e => {
     setFullDes(e.target.value);
+  };
+  function onTotalChange(value) {
+    console.log(value);
+    setTarget(value);
   };
   return (
     <>
@@ -154,7 +163,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/">
                   <a
-                    href="#pablo"
+                    href="/"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-home text-blueGray-400 mr-2 text-sm"></i>{" "}
@@ -163,9 +172,9 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/auth/register">
+                <Link href="/about">
                   <a
-                    href="#pablo"
+                    href="/about"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-users text-blueGray-300 mr-2 text-sm"></i>{" "}
@@ -174,9 +183,9 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/auth/register">
+                <Link href="/help">
                   <a
-                    href="#pablo"
+                    href="/help"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-question-circle text-blueGray-300 mr-2 text-sm"></i>{" "}
@@ -187,7 +196,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/finalreport">
                   <a
-                    href="#pablo"
+                    href="/finalreport"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-file-alt text-blueGray-300 mr-2 text-sm"></i>{" "}
@@ -239,21 +248,14 @@ export default function Sidebar() {
             name="total"
             rules={[{ required: true, message: 'Please input how much funds you need!' }]}
           >
-            <InputNumber />
+            <InputNumber onChange={onTotalChange}/>
           </Form.Item>
-          {/* <Form.Item
-            label="Due Date"
-            name="due"
-            rules={[{ required: true, message: 'Please pick the due date' }]}
-          >
-            <DatePicker />
-          </Form.Item> */}
           <Form.Item
             label="Project Details"
             name="details"
             rules={[{ required: true, message: 'Please input details of your project!' }]}
           >
-            <Input.TextArea showCount maxLength={3000} placeholder="No more than 3000 words" onChange={onFullDesChange} />
+            <Input.TextArea showCount maxLength={800} placeholder="No more than 800 words" onChange={onFullDesChange} />
           </Form.Item>
         </Form>
       </Modal>
