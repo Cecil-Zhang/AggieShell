@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Modal, Button, Form, Input, InputNumber, DatePicker } from 'antd';
-
+import { createCampaign } from "components/Solana/solana";
 
 import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
 import UserDropdown from "components/Dropdowns/UserDropdown.js";
@@ -12,18 +12,29 @@ export default function Sidebar() {
   const router = useRouter();
   const [showModal, setShowModal] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
-  const handleOk = () => {
+  const [projectName, setProjectName] = React.useState("");
+  const [simpleDes, setSimpleDes] = React.useState("");
+  const [fullDes, setFullDes] = React.useState("");
+  const handleOk = async () => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setShowModal(false);
-    }, 3000);
+    await createCampaign(projectName, simpleDes, "");
+    setLoading(false);
+    setShowModal(false);
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
   };
   const handleCancel = () => {
     setShowModal(false);
   };
-  const onChange = e => {
-    console.log('Change:', e.target.value);
+  const onNameChange = e => {
+    setProjectName(e.target.value);
+  };
+  const onSimpDesChange = e => {
+    setSimpleDes(e.target.value);
+  };
+  const onFullDesChange = e => {
+    setFullDes(e.target.value);
   };
   return (
     <>
@@ -214,35 +225,35 @@ export default function Sidebar() {
             name="projectName"
             rules={[{ required: true, message: 'Please input your project name!' }]}
           >
-            <Input />
+            <Input onChange={onNameChange} />
           </Form.Item>
           <Form.Item
             label="Brief Introduction"
             name="briefIntro"
             rules={[{ required: true, message: 'Please input one line of introduction!' }]}
           >
-            <Input placeholder="one line of introduction"/>
+            <Input placeholder="one line of introduction" onChange={onSimpDesChange} />
           </Form.Item>
           <Form.Item
-            label="Total funds Needed(in $USD)"
+            label="Total funds Needed(in SOL)"
             name="total"
             rules={[{ required: true, message: 'Please input how much funds you need!' }]}
           >
             <InputNumber />
           </Form.Item>
-          <Form.Item
+          {/* <Form.Item
             label="Due Date"
             name="due"
             rules={[{ required: true, message: 'Please pick the due date' }]}
           >
             <DatePicker />
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item
             label="Project Details"
             name="details"
             rules={[{ required: true, message: 'Please input details of your project!' }]}
           >
-            <Input.TextArea showCount maxLength={3000} placeholder="No more than 3000 words" onChange={onChange} />
+            <Input.TextArea showCount maxLength={3000} placeholder="No more than 3000 words" onChange={onFullDesChange} />
           </Form.Item>
         </Form>
       </Modal>

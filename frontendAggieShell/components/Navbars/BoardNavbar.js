@@ -1,6 +1,5 @@
 import React from "react";
-
-import UserDropdown from "components/Dropdowns/UserDropdown.js";
+import { PhantomBar } from "components/Solana/phantom";
 
 export default function Navbar() {
   return (
@@ -29,10 +28,10 @@ export default function Navbar() {
               />
             </div>
           </form>
-          {/* User */}
-          {/* <ul className="flex-col md:flex-row list-none items-center hidden md:flex">
-            <UserDropdown />
-          </ul> */}
+          {/* User Wallet */}
+          <ul className="flex-col md:flex-row list-none items-center hidden md:flex">
+            <PhantomBar />
+          </ul>
         </div>
       </nav>
       {/* End Navbar */}

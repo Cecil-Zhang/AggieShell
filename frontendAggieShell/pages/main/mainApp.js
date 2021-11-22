@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // components
 
@@ -8,55 +8,32 @@ import CardProjPre from "components/Cards/CardProjPre";
 
 import MainBoard from "layouts/MainBoard.js";
 
+import { getAllCampaigns } from "components/Solana/solana";
 export default function Dashboard() {
-  const mockData = [
-    {
-      'projectName': 'Project 1',
-    },
-    {
-      'projectName': 'Project 2',
-    },
-    {
-      'projectName': 'Project 3',
-    },
-    {
-      'projectName': 'Project 4',
-    },
-    {
-      'projectName': 'Project 5',
-    },
-    {
-      'projectName': 'Project 6',
-    },
-    {
-      'projectName': 'Project 7',
-    },
-    {
-      'projectName': 'Project 8',
-    },
-    {
-      'projectName': 'Project 9',
-    },
-  ]
+  const [cardsData, setCardsData] = useState([])
+  
+  useEffect(() => {
+    getAllCampaigns().then((val) => {
+      setCardsData(val);
+      console.log(val);
+    });
+  }, []);
   return (
     <>
       <div className="flex flex-wrap">
         {
-          mockData.map(item => (
-            <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
-              <CardProjPre ProjectName={item.projectName} />
+          cardsData.map(item => (
+            <div key={item.pubId} className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
+              <CardProjPre 
+                ProjectID={item.pubId}
+                ProjectName={item.name} 
+                ProjectSimpleDes={item.description}
+                ProjectRaisedAmount={parseInt(item.amount_donated.toString())}
+                ProjectTotalAmount={10000}
+              />
             </div>
           ))
         }
-        {/* <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
-          <CardProjPre ProjectName="Project 1" />
-        </div>
-        <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
-          <CardProjPre ProjectName="Project 2" />
-        </div>
-        <div className="w-full xl:w-4/12 mb-12 xl:mb-0 px-4">
-          <CardProjPre ProjectName="Project 3" />
-        </div> */}
       </div>
     </>
   );
