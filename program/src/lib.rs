@@ -51,6 +51,7 @@ struct CampaignDetails {
     pub image_link: String,
     pub amount_donated: u64,
     pub target: u64,
+    pub ongoing: u64,
 }
 
 fn create_campaign(
@@ -84,6 +85,7 @@ fn create_campaign(
         return Err(ProgramError::InsufficientFunds);
     }
     input_data.amount_donated = 0;
+    input_data.ongoing = 1;
     input_data.serialize(&mut &mut writing_account.try_borrow_mut_data()?[..])?;
     Ok(())
 }
@@ -110,11 +112,16 @@ fn withdraw(
         msg!("admin should be signer");
         return Err(ProgramError::IncorrectProgramId);
     }
-    let campaign_data = CampaignDetails::try_from_slice(*writing_account.data.borrow())
+    let mut campaign_data = CampaignDetails::try_from_slice(*writing_account.data.borrow())
         .expect("Error deserialaizing data");
 
     if campaign_data.admin != *admin_account.key {
         msg!("Only the account admin can withdraw");
+        return Err(ProgramError::InvalidAccountData);
+    }
+
+    if campaign_data.ongoing == 0 {
+        msg!("Only successful campaign can withdraw");
         return Err(ProgramError::InvalidAccountData);
     }
 
@@ -134,6 +141,8 @@ fn withdraw(
 
     **writing_account.try_borrow_mut_lamports()? -= input_data.amount;
     **admin_account.try_borrow_mut_lamports()? += input_data.amount;
+    campaign_data.ongoing = 0;
+    campaign_data.serialize(&mut &mut writing_account.try_borrow_mut_data()?[..])?;
 
     Ok(())
 }

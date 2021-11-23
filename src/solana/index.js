@@ -14,7 +14,7 @@ const cluster = "https://api.devnet.solana.com";
 const connection = new Connection(cluster, "confirmed");
 var wallet = getProvider();
 const programId = new PublicKey(
-    "6AvDjmvsamYGz7gDpXLa5PcRtvokNHUJWDuwsAMRaTtJ"
+    "7zKYVNxPzVa13R86nqoLtY8CS2cJgBLYbVeaaY8MPDME"
 );
 
 
@@ -61,7 +61,8 @@ class CampaignDetails {
                 ['long_description', 'string'],
                 ['image_link', 'string'],
                 ['amount_donated', 'u64'],
-                ['target', 'u64']]
+                ['target', 'u64'],
+                ['ongoing', 'u64']]
         }]]);
 }
 
@@ -92,7 +93,8 @@ export async function createCampaign(
         image_link: image_link,
         admin: wallet.publicKey.toBuffer(),
         amount_donated: 0,
-        target: target
+        target: target,
+        ongoing: 1,
     })
 
     let data = serialize(CampaignDetails.schema, campaign);
