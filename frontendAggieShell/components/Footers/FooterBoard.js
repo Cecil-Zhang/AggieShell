@@ -30,14 +30,6 @@ export default function FooterBoard() {
                 </li>
                 <li>
                   <a
-                    href="/about"
-                    className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://github.com/Cecil-Zhang/AggieShell"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
                   >

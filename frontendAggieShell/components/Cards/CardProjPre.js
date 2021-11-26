@@ -1,5 +1,5 @@
 import React from "react";
-import { Progress, Modal, Button, Input, InputNumber } from 'antd';
+import { Progress, Modal, Button, Input, InputNumber, Badge, Card } from 'antd';
 import { donateToCampaign, withdraw } from "components/Solana/solana";
 // components
 
@@ -54,7 +54,8 @@ export default function CardProjPre({
   }
 
   return (
-    <>
+    <Badge.Ribbon color={ProjectOnGoing?'blue':'green'} text={ProjectOnGoing?'Ongoing':'Closed'}>
+    <Card>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
@@ -69,7 +70,7 @@ export default function CardProjPre({
                 type="button"
                 onClick={onShowDetails}
               >
-                See details
+                Details
               </button>
             </div>
           </div>
@@ -101,13 +102,15 @@ export default function CardProjPre({
         centered
         visible={showDetails}
         onCancel={handleCancel}
-        width={'60%'}
+        width={'80%'}
         footer={[
           <Button key="back" onClick={handleCancel}>
             Close
           </Button>,
         ]}
       >
+        <Badge.Ribbon color={ProjectOnGoing?'blue':'green'} text={ProjectOnGoing?'Ongoing':'Closed'}>
+        <Card>
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
         <div className="flex flex-wrap">
           <div className="w-full xl:w-4/12 m-auto px-4 text-center">
@@ -146,13 +149,16 @@ export default function CardProjPre({
             <br />
           </div>
           <div className="w-full xl:w-8/12 px-4 m-auto text-center">
-            <p> Brief Discription: <span style={{'fontWeight': 'bold'}}>{ProjectSimpleDes}</span> </p>
+            <p> Discription: <span style={{'fontWeight': 'bold'}}>{ProjectSimpleDes}</span> </p>
             <h3> Project Details </h3>
-            <p> {ProjectFullDes} </p>
+            <p className="text-left"> {ProjectFullDes} </p>
           </div>
         </div>
       </div>
+      </Card>
+      </Badge.Ribbon>
       </Modal>
-    </>
+    </Card>
+    </Badge.Ribbon>
   );
 }

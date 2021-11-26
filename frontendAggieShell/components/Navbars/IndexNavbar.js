@@ -12,7 +12,7 @@ export default function Navbar(props) {
             <Link href="/">
               <a
                 className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 mt-3 whitespace-nowrap uppercase"
-                href="#pablo" className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block align-middle mr-4 py-2 whitespace-nowrap uppercase"
+                href="/" className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block align-middle mr-4 py-2 whitespace-nowrap uppercase"
               >
                 <img className="inline-block align-middle float-left w-6" src="img/brand/CowLogo.png" />
                 <span className="inline-block align-middle float-left">AggieShell</span>
@@ -35,35 +35,37 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto mb-0">
               <li className="flex items-center">
-                <a
-                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="/finalreport"
-                >
-                  <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  Final Report
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#introduction">
+                  <span>Introduction</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#deliverables">
+                  <span>Deliverables</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#implementation">
+                  <span>Implementation</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#timeline">
+                  <span>Timeline</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#future">
+                  <span>Future Works</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#about">
+                  <span>About us</span>
                 </a>
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto mb-0">
-
-              <li className="flex items-center">
-                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/">
-                  <span>Home</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/">
-                  <span>About</span>
-                </a>
-              </li>
-
-              <li className="flex items-center">
-                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/">
-                  <span>Help</span>
-                </a>
-              </li>
-
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -80,7 +82,7 @@ export default function Navbar(props) {
                   className="bg-blueGray-700 text-white active:bg-blueGray-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button"
                 >
-                  <i className="fas fa-rocket"></i> Launch App
+                  <i className="fas fa-rocket"></i> Launch Demo App
                 </button>
               </li>
               </Link>

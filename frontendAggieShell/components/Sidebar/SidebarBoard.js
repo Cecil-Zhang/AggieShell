@@ -3,9 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Modal, Button, Form, Input, InputNumber, DatePicker } from 'antd';
 import { createCampaign } from "components/Solana/solana";
-
-import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
-import UserDropdown from "components/Dropdowns/UserDropdown.js";
+import { PhantomBar } from "components/Solana/phantom";
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
@@ -60,7 +58,7 @@ export default function Sidebar() {
           {/* Brand */}
           <Link href="/">
             <a
-              href="#pablo"
+              href="/"
               className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             >
               <img className="inline-block align-middle float-left w-6" src="/img/brand/CowLogo.png" />
@@ -68,14 +66,14 @@ export default function Sidebar() {
             </a>
           </Link>
           {/* User */}
-          <ul className="md:hidden items-center flex flex-wrap list-none">
+          {/* <ul className="md:hidden items-center flex flex-wrap list-none">
             <li className="inline-block relative">
               <NotificationDropdown />
             </li>
             <li className="inline-block relative">
               <UserDropdown />
             </li>
-          </ul>
+          </ul> */}
           {/* Collapse */}
           <div
             className={
@@ -89,10 +87,11 @@ export default function Sidebar() {
                 <div className="w-6/12">
                   <Link href="/">
                     <a
-                      href="#pablo"
+                      href="/"
                       className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     >
-                      AggieShell
+                      <img className="inline-block align-middle float-left w-6" src="/img/brand/CowLogo.png" />
+                      <span className="inline-block align-middle float-left">AggieShell</span>
                     </a>
                   </Link>
                 </div>
@@ -107,8 +106,12 @@ export default function Sidebar() {
                 </div>
               </div>
             </div>
+            {/* User Wallet */}
+            <ul className="md:hidden items-center flex flex-wrap list-none">
+              <PhantomBar />
+            </ul>
             {/* Form */}
-            <form className="mt-6 mb-4 md:hidden">
+            {/* <form className="mt-6 mb-4 md:hidden">
               <div className="mb-3 pt-0">
                 <input
                   type="text"
@@ -116,7 +119,7 @@ export default function Sidebar() {
                   className="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
                 />
               </div>
-            </form>
+            </form> */}
 
             {/* Divider */}
             <hr className="my-4 md:min-w-full" />
@@ -143,7 +146,7 @@ export default function Sidebar() {
                         "fas fa-plus-square mr-2 text-sm " +
                         (router.pathname.indexOf("/admin/dashboard") !== -1
                           ? "opacity-75"
-                          : "text-blueGray-300")
+                          : "text-blueGray-400")
                       }
                     ></i>{" "}
                     Create New
@@ -172,37 +175,36 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/about">
+                <Link href="/#about">
                   <a
-                    href="/about"
+                    href="/"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-users text-blueGray-300 mr-2 text-sm"></i>{" "}
+                    <i className="fas fa-users text-blueGray-400 mr-2 text-sm"></i>{" "}
                     About
                   </a>
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/help">
+                <Link href="/#deliverables">
                   <a
-                    href="/help"
+                    href="/#deliverables"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
-                    <i className="fas fa-question-circle text-blueGray-300 mr-2 text-sm"></i>{" "}
-                    Help
+                    <i className="fas fa-question-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
+                    How to get started
                   </a>
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/finalreport">
-                  <a
-                    href="/finalreport"
-                    className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  >
-                    <i className="fas fa-file-alt text-blueGray-300 mr-2 text-sm"></i>{" "}
-                    Final Report
-                  </a>
-                </Link>
+                <a
+                  href="https://github.com/Cecil-Zhang/AggieShell/"
+                  target="_blank"
+                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                >
+                  <i className="fab fa-github text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  Star GitHub
+                </a>
               </li>
             </ul>
           </div>

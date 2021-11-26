@@ -10,15 +10,15 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section id="introduction" className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                AggieShell - A Crowdfunding Platform.
+                AggieShell - A Blockchain-based Crowdfunding Platform
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                AggieShell is Free and Open Source. It is build upon BlockChain {" "}
+                AggieShell is Free and Open Source Crowdfunding Platform. It is build upon BlockChain {" "}
                 <a
                   href="https://solana.com"
                   className="text-blueGray-600"
@@ -27,7 +27,7 @@ export default function Index() {
                 >
                   Solana
                 </a>
-                . It consists of a front end web app, a backend server, a database, and solana smart contract.
+                . It consists of a React web app and Solana smart contracts.
               </p>
               <div className="mt-12">
                 <a
@@ -35,14 +35,14 @@ export default function Index() {
                   target="_blank"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Launch App
+                  Learn how to get started
                 </a>
                 <a
                   href="/finalreport"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
                   target="_blank"
                 >
-                  Development Report
+                  Launch Demo App
                 </a>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="container mx-auto overflow-hidden pb-20">
+        <div id="implementation" className="container mx-auto overflow-hidden pb-20">
           <div className="flex flex-wrap items-center">
             <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
