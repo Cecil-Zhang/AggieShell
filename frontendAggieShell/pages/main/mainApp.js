@@ -3,23 +3,27 @@ import React, { useEffect, useState } from "react";
 // components
 
 import CardProjPre from "components/Cards/CardProjPre";
-
+import { Spin } from "antd";
 // layout for page
 
 import MainBoard from "layouts/MainBoard.js";
 
 import { getAllCampaigns } from "components/Solana/solana";
 export default function Dashboard() {
-  const [cardsData, setCardsData] = useState([])
+  const [cardsData, setCardsData] = useState([]);
+  const [loading, setLoading] = useState(false);
   
-  useEffect(() => {
-    getAllCampaigns().then((val) => {
+  useEffect(async () => {
+    setLoading(true);
+    await getAllCampaigns().then((val) => {
       setCardsData(val);
       console.log(val);
     });
+    setLoading(false);
   }, []);
   return (
     <>
+    <Spin spinning={loading} tip="fetching projects..." size="large">
       <div className="flex flex-wrap">
         {
           cardsData.map(item => (
@@ -37,6 +41,7 @@ export default function Dashboard() {
           ))
         }
       </div>
+    </Spin>
     </>
   );
 }

@@ -2193,6 +2193,10 @@ select {
   margin: 4rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .-m-16 {
   margin: -4rem;
 }
@@ -2397,6 +2401,10 @@ select {
 
 .-mt-64 {
   margin-top: -16rem;
+}
+
+.-mb-px {
+  margin-bottom: -1px;
 }
 
 .last\:mr-0:last-child {
@@ -2650,6 +2658,11 @@ select {
   padding-bottom: 0.25rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2683,6 +2696,11 @@ select {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-6 {
@@ -2758,6 +2776,10 @@ select {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pl-3 {
@@ -3474,7 +3496,7 @@ select {
 }
 
 .w-6 {
-  width: 1.65rem;
+  width: 1.5rem;
 }
 
 .w-8 {

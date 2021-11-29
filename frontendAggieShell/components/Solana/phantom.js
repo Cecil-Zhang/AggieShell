@@ -56,6 +56,7 @@ const PhantomBar = () => {
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         // Update the document title using the browser API
+        console.log("phantom useEffect operated")
         const phantom = getProvider(false);
         if (phantom) {
             phantom.connect({onlyIfTrusted: true})
