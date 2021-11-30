@@ -47,9 +47,12 @@ export default function Deliverables() {
               <div className="px-6">
                 <div className="text-center mt-5">
                   <h3 className="text-4xl font-semibold leading-normal py-2 text-blueGray-700">
-                    Gallery
+                    Getting Started
                   </h3>
                   <div className="mt-4 border-t border-blueGray-200">
+                    <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
+                      Make sure you <a href="https://docs.solana.com/cli/transfer-tokens">airdrop</a> yourself some SOLs on Devnet before we start
+                    </h3>
                     <img
                       alt="..."
                       className="shadow-xl rounded-lg mx-auto h-auto mt-8"
@@ -57,62 +60,73 @@ export default function Deliverables() {
                       width="20%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Wallet authorization
+                      Click Connect Phantom Wallet for authorization
                     </h3>
                   </div>
                   <div className="mt-4 border-t border-blueGray-200">
                     <img
                       alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
-                      src="img/deliverables/create_new.png"
-                      width="60%"
-                    />
-                    <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Create new campaign page
-                    </h3>
-                  </div>
-                  <div className="mt-4 border-t border-blueGray-200">
-                    <img
-                      alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
                       src="img/deliverables/dashboard.png"
                       width="70%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Dashboard
+                      a Dashboard of all campaigns
                     </h3>
                   </div>
                   <div className="mt-4 border-t border-blueGray-200">
                     <img
                       alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
                       src="img/deliverables/campaign_description.png"
                       width="70%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Campaign description
+                      Check Campaign descriptions by clicking details button
                     </h3>
                   </div>
                   <div className="mt-4 border-t border-blueGray-200">
                     <img
                       alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
+                      src="img/deliverables/create_new.png"
+                      width="60%"
+                    />
+                    <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
+                      Create a new campaign by click create new on the left
+                    </h3>
+                  </div>
+                  <div className="mt-4 border-t border-blueGray-200">
+                    <img
+                      alt="..."
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
                       src="img/deliverables/approve_transaction.png"
                       width="55%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Making and approving donation
+                      Making and approving donation to any ongoing campaign
                     </h3>
                   </div>
                   <div className="mt-4 border-t border-blueGray-200">
                     <img
                       alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
+                      src="img/deliverables/withdraw.png"
+                      width="55%"
+                    />
+                    <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
+                      Creator can withdraw funds after the goals has been reached
+                    </h3>
+                  </div>
+                  <div className="mt-4 border-t border-blueGray-200">
+                    <img
+                      alt="..."
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
                       src="img/deliverables/completed_campaign.png"
                       width="55%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
-                      Completed campaign screen
+                      Campaign will be closed after the creator withdraw all the funds
                     </h3>
                   </div>
                 </div>

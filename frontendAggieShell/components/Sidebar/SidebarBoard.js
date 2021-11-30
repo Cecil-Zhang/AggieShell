@@ -186,9 +186,9 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="items-center">
-                <Link href="/#deliverables">
+                <Link href="/deliverables">
                   <a
-                    href="/#deliverables"
+                    href="/deliverables"
                     className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-question-circle text-blueGray-400 mr-2 text-sm"></i>{" "}

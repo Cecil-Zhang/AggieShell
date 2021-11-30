@@ -52,9 +52,15 @@ export default function Implementation() {
                   <div className="mt-4 border-t border-blueGray-200">
                     <img
                       alt="..."
-                      className="shadow-xl rounded-lg w-1/6 mx-auto h-auto mt-8"
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
                       src="img/overview_architecture.png"
                       width="60%"
+                    />
+                    <img
+                      alt="..."
+                      className="shadow-xl rounded-lg mx-auto h-auto mt-8"
+                      src="img/communication.png"
+                      width="50%"
                     />
                     <h3 className="text-xs font-normal uppercase mt-6 leading-normal">
                       Communication flow
@@ -77,6 +83,14 @@ export default function Implementation() {
                         Solana to interact with the Solana blockchain. As a consequence,
                         our decentralized app can now both interact with smart contracts and
                         wallets on Solana blockchain.
+
+                        <br />
+                        <br />
+                        Phantom is a wallet and browser extension that can be used to manage 
+                        digital assets and access decentralized applications on the Solana blockchain.
+                        Phantom extension in browsers such as Chrome, FireFox, and Edge injects a solana 
+                        object into the javascript context so that our app can manipulate it to trigger 
+                        transactions and sign transactions on behalf of users.
                       </p>
                     </div>
                   </div>

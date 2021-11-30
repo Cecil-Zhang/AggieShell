@@ -10,15 +10,15 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section id="introduction" className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                AggieShell - A Blockchain-based Crowdfunding Platform
+                AggieShell: A Blockchain-based Crowdfunding Platform
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                AggieShell is Free and Open Source Crowdfunding Platform. It is build upon BlockChain {" "}
+                AggieShell is a Decentralized, Free and Open-Sourced Crowdfunding Platform. It is build upon BlockChain {" "}
                 <a
                   href="https://solana.com"
                   className="text-blueGray-600"
@@ -27,20 +27,18 @@ export default function Index() {
                 >
                   Solana
                 </a>
-                . It consists of a React web app and Solana smart contracts.
+                , and consists of a React web app and Solana smart contracts.
               </p>
               <div className="mt-12">
                 <a
-                  href="/main/mainApp"
-                  target="_blank"
+                  href="/deliverables"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Learn how to get started
                 </a>
                 <a
-                  href="/finalreport"
+                  href="/main/mainApp"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
-                  target="_blank"
                 >
                   Launch Demo App
                 </a>
@@ -71,12 +69,16 @@ export default function Index() {
                 a decentralized and trustless tool that is both transparent and easy to use through
                 our app.
               </p>
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400">
+                Our codebase is available at GitHub, you can either try it out through our demo, 
+                or build and modify your own.
+              </p>
               <a
                 href="https://github.com/Cecil-Zhang/AggieShell/"
                 target="_blank"
                 className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
               >
-                Github Docs
+                GitHub Repo
               </a>
             </div>
 
@@ -126,7 +128,6 @@ export default function Index() {
           </div>
         </div>
 
-      <div id="introduction"></div>
       <section className="mt-48 pb-40 relative bg-blueGray-100">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
@@ -235,7 +236,7 @@ export default function Index() {
                         <i className="fas fa-file-alt"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        Aggie Coin
+                        Aggie Coin (Later)
                       </h6>
                       <p className="mb-4 text-blueGray-500">
                         Transactions and funding on the Aggie Shell platform is done
@@ -377,7 +378,7 @@ export default function Index() {
               </p>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
                 The frontend of our app uses Ant Design as well as Notus JS, a UI
-                toolkit that uses React, Tailwind CSS, and Node.js.
+                toolkit that uses React, TailwindCSS, and NextJs.
               </p>
               <a
                 href="/implementation"
@@ -390,18 +391,80 @@ export default function Index() {
           </div>
         </div>
 
-        <div id="about"></div>
+      <section id="timeline" className="py-20 mt-24 bg-blueGray-600 overflow-hidden">
+        <div className="container mx-auto pb-64">
         <div className="justify-center text-center flex flex-wrap mt-24">
           <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Developer Team</h2>
-            <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-              ECS 265 Fall 2021
-            </p>
+            <h2 className="text-white font-semibold text-4xl">Development Timeline</h2>
+            <br /> <br />
           </div>
+        </div>
+          <div class="timeline2">
+						<div class="container2 left2">
+						  <div class="content2">
+							<h3 className="text-white">Week 1</h3>
+							<p>Brainstorm project ideas. Explore market opportunities. Invest related technology.</p>
+						  </div>
+						</div>
+						<div class="container2 right2">
+						  <div class="content2">
+							<h3 className="text-white">Week 2</h3>
+							<p>Finalize the project proposal, business requirements, and use cases. Make technology decisions. Communicate division of work. Make a detailed development plan.</p>
+						  </div>
+						</div>
+						<div class="container2 left2">
+						  <div class="content2">
+							<h3 className="text-white">Week 3</h3>
+							<p>Prepare our development environment. Research and learn about technical implementation.</p>
+						  </div>
+						</div>
+						<div class="container2 right2">
+						  <div class="content2">
+							<h3 className="text-white">Week 4</h3>
+							<p>Work out a draft feasible design of uncertain technology. Explore underlying issues and figure out solutions.</p>
+						  </div>
+						</div>
+						<div class="container2 left2">
+						  <div class="content2">
+							<h3 className="text-white">Week 5-6</h3>
+							<p>Distribute detailed tasks to individuals and work on the first version of each module.</p>
+						  </div>
+						</div>
+						<div class="container2 right2">
+						  <div class="content2">
+							<h3 className="text-white">Week 7-8</h3>
+							<p>Integrate submodules together and fine-tuning problems came across.</p>
+						  </div>
+						</div>
+						<div class="container2 left2">
+							<div class="content2">
+							  <h3 className="text-white">Week 9</h3>
+							  <p>Deploy code to Solana test server. Evaluate and present the final project.</p>
+							</div>
+						  </div>
+						  <div class="container2 right2">
+							<div class="content2">
+							  <h3 className="text-white">Week 10</h3>
+							  <p>Complete the write-up work.</p>
+							</div>
+						</div>
+					</div>
         </div>
       </section>
 
-      <section className="block relative z-1">
+      <div id="future"></div>
+      <div className="justify-center text-center flex flex-wrap mt-24">
+        <div className="w-full md:w-6/12 px-12 md:px-4">
+          <h2 className="font-semibold text-4xl">Future Works</h2>
+          <p className="text-xl leading-relaxed mt-4 mb-4 text-blueGray-500">
+            Our next main goals include supporting multiple coins apart from SOLs, such as Aggie Coin, Ethereums, etc.; 
+            publishing our app to Solana's Main net. 
+          </p>
+        </div>
+      </div>
+      </section>
+
+      {/* <section className="block relative z-1">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap bg-blueGray-400">
             <div className="w-full lg:w-12/12 px-4 -mt-24">
@@ -488,7 +551,187 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section id="about" className="pt-20 pb-48">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap justify-center text-center mb-24">
+              <div className="w-full lg:w-6/12 px-4">
+                <h2 className="text-4xl font-semibold">Contributors</h2>
+                <p className="text-lg leading-relaxed m-4 text-blueGray-500">
+                  
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap">
+              <div className="w-full md:w-6/12 lg:w-4/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/pfp/wenchang.jpg"
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Wenchang Liu</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                      Web Developer / UX Design
+                    </p>
+                    <div className="mt-6">
+                      <a
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://github.com/williamlwclwc"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                      <a
+                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/wenchang-liu-938a6bb2"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-4/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/pfp/shuxian.jpg"
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Shuxian Zhang</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                      Web Developer / Digital Wallet Integration
+                    </p>
+                    <div className="mt-6">
+                      <a
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://github.com/Cecil-Zhang"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                      <a
+                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/shuxian-zhang-927b8b157/"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-4/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/pfp/zhixuan.jpg"
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Zhixuan Li</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                      Smart Contract Developer / API Design
+                    </p>
+                    <div className="mt-6">
+                      <a
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://github.com/29Esther"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                      <a
+                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/lizhixuan"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/pfp/jinxiao.jpg"
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Jinxiao Yu</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                      Product Manager / Smart Contract Developer
+                    </p>
+                    <div className="mt-6">
+                      {/* <a
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://github.com/williamlwclwc"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                      <a
+                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/wenchang-liu-938a6bb2"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 lg:w-6/12 lg:mb-0 mb-12 px-4">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="/img/pfp/justin.jpg"
+                    className="shadow-lg rounded-full mx-auto max-w-120-px"
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Justin Xu</h5>
+                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                      Web Developer / Landing Page Design
+                    </p>
+                    <div className="mt-6">
+                      {/* <a
+                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://github.com/williamlwclwc"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a> */}
+                      <a
+                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/justin-x-88bb1b103"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <div className="py-10">
       </div>
