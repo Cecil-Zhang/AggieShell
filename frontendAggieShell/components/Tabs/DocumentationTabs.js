@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tabs = () => {
+const DocumentationTabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
@@ -112,4 +112,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default DocumentationTabs;

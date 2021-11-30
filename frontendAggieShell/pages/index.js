@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import Tabs from "components/Tabs/DocumentationTabs.js";
+import DocumentationTabs from "components/Tabs/DocumentationTabs.js";
 
 export default function Index() {
   return (
@@ -266,7 +266,7 @@ export default function Index() {
                 <h2 className="text-xl font-semibold">
                   Dependencies
                 </h2>
-                <Tabs />
+                <DocumentationTabs />
               </div>
             </div>
 
@@ -382,6 +382,7 @@ export default function Index() {
           </div>
         </div>
 
+        <div id="about"></div>
         <div className="justify-center text-center flex flex-wrap mt-24">
           <div className="w-full md:w-6/12 px-12 md:px-4">
             <h2 className="font-semibold text-4xl">Developer Team</h2>
@@ -394,7 +395,7 @@ export default function Index() {
 
       <section className="block relative z-1">
         <div className="container mx-auto">
-          <div className="justify-center flex flex-wrap bg-blueGray-600">
+          <div className="justify-center flex flex-wrap bg-blueGray-400">
             <div className="w-full lg:w-12/12 px-4 -mt-24">
               <div className="flex flex-wrap">
                 <div className="w-full lg:w-4/12 px-4">
@@ -444,7 +445,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="justify-center flex flex-wrap bg-blueGray-600">
+          <div className="justify-center flex flex-wrap bg-blueGray-400">
             <div className="w-full lg:w-12/12 px-4  mt-10">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full lg:w-4/12 px-4">
