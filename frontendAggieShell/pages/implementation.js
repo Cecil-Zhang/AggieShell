@@ -65,19 +65,19 @@ export default function Implementation() {
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
-                        An artist of considerable range, Jenna the name taken by
-                        Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                        performs and records all of his own music, giving it a
-                        warm, intimate feel with a solid groove structure. An
-                        artist of considerable range.
+                        With Solana, a smart contract (or program) is read-only or stateless
+                        and contains just program logic. We wrote our smart contract in
+                        Rust. After deployment, our smart contracts can be interacted
+                        with by external accounts. The accounts that interact with the
+                        programs store all the necessary data, such as fundraising campaigns,
+                        donations, and so on.
+                        <br />
+                        <br />
+                        On our decentralized application side, we use a JSON RPC API from
+                        Solana to interact with the Solana blockchain. As a consequence,
+                        our decentralized app can now both interact with smart contracts and
+                        wallets on Solana blockchain.
                       </p>
-                      <a
-                        href="#pablo"
-                        className="font-normal text-lightBlue-500"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Show more
-                      </a>
                     </div>
                   </div>
                 </div>

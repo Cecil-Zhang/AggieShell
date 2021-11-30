@@ -89,7 +89,7 @@ export default function Index() {
 
       <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-24 py-16 px-12 relative z-10">
-            <div className="w-full text-center lg:w-8/12">
+            <div className="w-ful text-center lg:w-8/12">
               <p className="text-4xl text-center">
                 <img
                   href="/img/aggiecoin.jpg"
@@ -106,19 +106,19 @@ export default function Index() {
               </p>
               <div className="sm:block flex flex-col mt-10">
                 <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index"
+                  href="https://www.youtube.com/watch?v=ZE2HxTmxfrI"
                   target="_blank"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Get started
+                  What is a Smart Contract?
                 </a>
                 <a
-                  href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
+                  href="https://www.ibm.com/topics/smart-contracts"
                   target="_blank"
                   className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
                 >
-                  <i className="fab fa-github text-lg mr-1"></i>
-                  <span>Help With a Star</span>
+                  <i className="fab text-lg mr-1"></i>
+                  <span>Why Smart Contracts?</span>
                 </a>
               </div>
               <div className="text-center mt-16"></div>
@@ -262,6 +262,14 @@ export default function Index() {
                 <p className="mt-4 mb-8 text-lg leading-relaxed text-blueGray-500">
                   The AggieShell web application dashboard allow users to create,
                   edit, and donate to new and existing fundraising campaign projects.
+                  <br />
+                  <a
+                    href="/deliverables"
+                    className="text-sm font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
+                  >
+                    Read more{" "}
+                    <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
+                  </a>
                 </p>
                 <h2 className="text-xl font-semibold">
                   Dependencies
@@ -402,12 +410,12 @@ export default function Index() {
                   <h5 className="text-xl font-semibold pb-4 text-center">
                     Shuxian Zhang
                   </h5>
-                  <Link href="/auth/login">
+                  <Link href="https://www.linkedin.com/in/shuxian-zhang-927b8b157/">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/login.jpg"
+                        src="/img/pfp/shuxian.jpg"
                       />
                     </div>
                   </Link>
@@ -417,12 +425,12 @@ export default function Index() {
                   <h5 className="text-xl font-semibold pb-4 text-center">
                     Wenchang Liu
                   </h5>
-                  <Link href="/profile">
+                  <Link href="https://www.linkedin.com/in/wenchang-liu-938a6bb2">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/profile.jpg"
+                        src="/img/pfp/wenchang.jpg"
                       />
                     </div>
                   </Link>
@@ -432,12 +440,12 @@ export default function Index() {
                   <h5 className="text-xl font-semibold pb-4 text-center">
                     Zhixuan Li
                   </h5>
-                  <Link href="/landing">
+                  <Link href="https://www.linkedin.com/in/lizhixuan">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/landing.jpg"
+                        src="/img/pfp/zhixuan.jpg"
                       />
                     </div>
                   </Link>
@@ -449,12 +457,12 @@ export default function Index() {
             <div className="w-full lg:w-12/12 px-4  mt-10">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full lg:w-4/12 px-4">
-                  <Link href="/profile">
+                  <Link href="https://github.com/Cecil-Zhang">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/profile.jpg"
+                        src="/img/pfp/jinxiao.jpg"
                       />
                     </div>
                   </Link>
@@ -462,14 +470,13 @@ export default function Index() {
                     Jinxiao Yu
                   </h5>
                 </div>
-
                 <div className="w-full lg:w-4/12 px-4">
-                  <Link href="/profile">
+                  <Link href="https://www.linkedin.com/in/justin-x-88bb1b103/">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                       <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/profile.jpg"
+                        src="/img/pfp/justin.jpg"
                       />
                     </div>
                   </Link>
