@@ -5,6 +5,7 @@ import Link from "next/link";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import DocumentationTabs from "components/Tabs/DocumentationTabs.js";
+import { VerticalAlignTopOutlined } from "@ant-design/icons";
 
 export default function Index() {
   return (
@@ -236,7 +237,7 @@ export default function Index() {
                         <i className="fas fa-file-alt"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
-                        Aggie Coin (Later)
+                        Aggie Coin (Coming)
                       </h6>
                       <p className="mb-4 text-blueGray-500">
                         Transactions and funding on the Aggie Shell platform is done
@@ -349,7 +350,7 @@ export default function Index() {
                     href="https://phantom.app/"
                     target="_blank"
                   >
-                    <div className="bg-purple-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                    <div className="bg-indigo-500 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
@@ -391,74 +392,13 @@ export default function Index() {
           </div>
         </div>
 
-      <section id="timeline" className="py-20 mt-24 bg-blueGray-600 overflow-hidden">
-        <div className="container mx-auto pb-64">
-        <div className="justify-center text-center flex flex-wrap mt-24">
-          <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="text-white font-semibold text-4xl">Development Timeline</h2>
-            <br /> <br />
-          </div>
-        </div>
-          <div class="timeline2">
-						<div class="container2 left2">
-						  <div class="content2">
-							<h3 className="text-white">Week 1</h3>
-							<p>Brainstorm project ideas. Explore market opportunities. Invest related technology.</p>
-						  </div>
-						</div>
-						<div class="container2 right2">
-						  <div class="content2">
-							<h3 className="text-white">Week 2</h3>
-							<p>Finalize the project proposal, business requirements, and use cases. Make technology decisions. Communicate division of work. Make a detailed development plan.</p>
-						  </div>
-						</div>
-						<div class="container2 left2">
-						  <div class="content2">
-							<h3 className="text-white">Week 3</h3>
-							<p>Prepare our development environment. Research and learn about technical implementation.</p>
-						  </div>
-						</div>
-						<div class="container2 right2">
-						  <div class="content2">
-							<h3 className="text-white">Week 4</h3>
-							<p>Work out a draft feasible design of uncertain technology. Explore underlying issues and figure out solutions.</p>
-						  </div>
-						</div>
-						<div class="container2 left2">
-						  <div class="content2">
-							<h3 className="text-white">Week 5-6</h3>
-							<p>Distribute detailed tasks to individuals and work on the first version of each module.</p>
-						  </div>
-						</div>
-						<div class="container2 right2">
-						  <div class="content2">
-							<h3 className="text-white">Week 7-8</h3>
-							<p>Integrate submodules together and fine-tuning problems came across.</p>
-						  </div>
-						</div>
-						<div class="container2 left2">
-							<div class="content2">
-							  <h3 className="text-white">Week 9</h3>
-							  <p>Deploy code to Solana test server. Evaluate and present the final project.</p>
-							</div>
-						  </div>
-						  <div class="container2 right2">
-							<div class="content2">
-							  <h3 className="text-white">Week 10</h3>
-							  <p>Complete the write-up work.</p>
-							</div>
-						</div>
-					</div>
-        </div>
-      </section>
-
       <div id="future"></div>
       <div className="justify-center text-center flex flex-wrap mt-24">
         <div className="w-full md:w-6/12 px-12 md:px-4">
           <h2 className="font-semibold text-4xl">Future Works</h2>
           <p className="text-xl leading-relaxed mt-4 mb-4 text-blueGray-500">
             Our next main goals include supporting multiple coins apart from SOLs, such as Aggie Coin, Ethereums, etc.; 
-            publishing our app to Solana's Main net. 
+            publishing our app to Solana's Main Net. 
           </p>
         </div>
       </div>
@@ -559,8 +499,15 @@ export default function Index() {
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Contributors</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  
+                  ECS265 Fall 2021 - Professor Mohammad Sadoghi, TA Sajjad Rahnama
                 </p>
+                <a
+                  href="/timeline"
+                  className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
+                >
+                  Read more about development timeline{" "}
+                  <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
+                </a>
               </div>
             </div>
             <div className="flex flex-wrap">
@@ -583,7 +530,7 @@ export default function Index() {
                         target="_blank"
                         href="https://github.com/williamlwclwc"
                       >
-                        <i className="fab fa-github"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-github"></i>
                       </a>
                       <a
                         className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -591,7 +538,7 @@ export default function Index() {
                         target="_blank"
                         href="https://www.linkedin.com/in/wenchang-liu-938a6bb2"
                       >
-                        <i className="fab fa-linkedin"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-linkedin"></i>
                       </a>
                     </div>
                   </div>
@@ -607,7 +554,7 @@ export default function Index() {
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">Shuxian Zhang</h5>
                     <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Web Developer / Digital Wallet Integration
+                      Web Developer / Wallet Integration
                     </p>
                     <div className="mt-6">
                       <a
@@ -616,7 +563,7 @@ export default function Index() {
                         target="_blank"
                         href="https://github.com/Cecil-Zhang"
                       >
-                        <i className="fab fa-github"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-github"></i>
                       </a>
                       <a
                         className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -624,7 +571,7 @@ export default function Index() {
                         target="_blank"
                         href="https://www.linkedin.com/in/shuxian-zhang-927b8b157/"
                       >
-                        <i className="fab fa-linkedin"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-linkedin"></i>
                       </a>
                     </div>
                   </div>
@@ -649,7 +596,7 @@ export default function Index() {
                         target="_blank"
                         href="https://github.com/29Esther"
                       >
-                        <i className="fab fa-github"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-github"></i>
                       </a>
                       <a
                         className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -657,7 +604,7 @@ export default function Index() {
                         target="_blank"
                         href="https://www.linkedin.com/in/lizhixuan"
                       >
-                        <i className="fab fa-linkedin"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-linkedin"></i>
                       </a>
                     </div>
                   </div>
@@ -723,7 +670,7 @@ export default function Index() {
                         target="_blank"
                         href="https://www.linkedin.com/in/justin-x-88bb1b103"
                       >
-                        <i className="fab fa-linkedin"></i>
+                        <i style={{verticalAlign: 'bottom'}} className="fab fa-linkedin"></i>
                       </a>
                     </div>
                   </div>

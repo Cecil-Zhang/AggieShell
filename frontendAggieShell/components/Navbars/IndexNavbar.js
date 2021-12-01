@@ -50,13 +50,13 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="flex items-center">
-                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#timeline">
-                  <span>Timeline</span>
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#future">
+                  <span>Future Works</span>
                 </a>
               </li>
               <li className="flex items-center">
-                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/#future">
-                  <span>Future Works</span>
+                <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="/timeline">
+                  <span>Timeline</span>
                 </a>
               </li>
               <li className="flex items-center">
@@ -66,6 +66,15 @@ export default function Navbar(props) {
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto mb-0">
+              <li className="flex items-center">
+                <a
+                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="/deliverables"
+                >
+                  <i className="text-blueGray-400 fas fa-question-circle text-lg leading-lg " />
+                  <span className="lg:hidden inline-block ml-2">Help</span>
+                </a>
+              </li>
               <li className="flex items-center">
                 <a
                   className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
