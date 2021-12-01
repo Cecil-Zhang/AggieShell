@@ -393,105 +393,27 @@ export default function Index() {
         </div>
 
       <div id="future"></div>
-      <div className="justify-center text-center flex flex-wrap mt-24">
-        <div className="w-full md:w-6/12 px-12 md:px-4">
-          <h2 className="font-semibold text-4xl">Future Works</h2>
-          <p className="text-xl leading-relaxed mt-4 mb-4 text-blueGray-500">
-            Our next main goals include supporting multiple coins apart from SOLs, such as Aggie Coin, Ethereums, etc.; 
-            publishing our app to Solana's Main Net. 
-          </p>
+      <div className="container mx-auto">
+        <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg py-16 px-12 relative z-10">
+          <div className="w-full text-center lg:w-8/12">
+            <p className="text-4xl text-center">
+              <img
+                href="/img/aggiecoin.jpg"
+                className="max-w-full rounded-lg shadow-xl"
+              />
+            </p>
+            <h3 className="font-semibold text-3xl">
+              What's Next?
+            </h3>
+            <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
+              Our next main goals include supporting multiple coins apart from SOLs, such as Aggie Coin, Ethereums, etc.; 
+              publishing our app to Solana's Main Net. 
+            </p>
+            <div className="text-center mt-16"></div>
+          </div>
         </div>
       </div>
       </section>
-
-      {/* <section className="block relative z-1">
-        <div className="container mx-auto">
-          <div className="justify-center flex flex-wrap bg-blueGray-400">
-            <div className="w-full lg:w-12/12 px-4 -mt-24">
-              <div className="flex flex-wrap">
-                <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Shuxian Zhang
-                  </h5>
-                  <Link href="https://www.linkedin.com/in/shuxian-zhang-927b8b157/">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/pfp/shuxian.jpg"
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Wenchang Liu
-                  </h5>
-                  <Link href="https://www.linkedin.com/in/wenchang-liu-938a6bb2">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/pfp/wenchang.jpg"
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="w-full lg:w-4/12 px-4">
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Zhixuan Li
-                  </h5>
-                  <Link href="https://www.linkedin.com/in/lizhixuan">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/pfp/zhixuan.jpg"
-                      />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="justify-center flex flex-wrap bg-blueGray-400">
-            <div className="w-full lg:w-12/12 px-4  mt-10">
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full lg:w-4/12 px-4">
-                  <Link href="https://github.com/Cecil-Zhang">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/pfp/jinxiao.jpg"
-                      />
-                    </div>
-                  </Link>
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Jinxiao Yu
-                  </h5>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <Link href="https://www.linkedin.com/in/justin-x-88bb1b103/">
-                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
-                        alt="..."
-                        className="align-middle border-none max-w-full h-auto rounded-lg"
-                        src="/img/pfp/justin.jpg"
-                      />
-                    </div>
-                  </Link>
-                  <h5 className="text-xl font-semibold pb-4 text-center">
-                    Justin Xu
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section id="about" className="pt-20 pb-48">
           <div className="container mx-auto px-4">
@@ -499,7 +421,7 @@ export default function Index() {
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Contributors</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  ECS265 Fall 2021 - Professor Mohammad Sadoghi, TA Sajjad Rahnama
+                  ECS265 Fall 2021 - Prof Mohammad Sadoghi, TA Sajjad Rahnama
                 </p>
                 <a
                   href="/timeline"
