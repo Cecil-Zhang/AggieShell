@@ -25,17 +25,20 @@ export default function Footer() {
         </div>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-center lg:text-left">
-            <div className="w-full lg:w-6/12 px-4">
+            <div className="w-6/12 px-4">
               <h4 className="text-3xl font-semibold">AggieShell @ UCDavis</h4>
               <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                 AggieShell is a group project of ECS265 Distributed Database
               </h5>
+              <div className="mx-0 w-6/12">
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=E1eQgQwX3onCpHvtW7v3nW6arkVu26s_AKah_u7XeL0'></script>
+              </div>
             </div>
-            <div className="w-full lg:w-6/12 px-4">
+            <div className="w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                    Expolab & ECS265
+                    References
                   </span>
                   <ul className="list-unstyled">
                     <li>
@@ -68,17 +71,35 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://resilientdb.com"
+                        href="https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/"
                         target="_blank"
                       >
-                        ResilientDB
+                        Smart Contract Tutorial
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://learn.figment.io/tutorials/crowdfunding-with-solana#writing-a-function-to-invoke-create_campaign-instruction"
+                        target="_blank"
+                      >
+                        Solana App Tutorial
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://www.creative-tim.com/product/notus-js"
+                        target="_blank"
+                      >
+                        Notus NextJs
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                    Links
+                    Navigation
                   </span>
                   <ul className="list-unstyled">
                     <li>
@@ -102,7 +123,7 @@ export default function Footer() {
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href="/deliverables"
                       >
-                        How to get started
+                        How to Get started
                       </a>
                     </li>
                     <li>
@@ -111,6 +132,22 @@ export default function Footer() {
                         href="/#about"
                       >
                         About Us
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="/timeline"
+                      >
+                        Timeline
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="/timeline"
+                      >
+                        Implementation Details
                       </a>
                     </li>
                   </ul>
@@ -124,7 +161,7 @@ export default function Footer() {
               <div className="text-sm text-blueGray-500 font-semibold py-1">
                 Copyright © {new Date().getFullYear()} AggieShell by{" "}
                 <a
-                  href="https://www.creative-tim.com?ref=nnjs-footer"
+                  href="https://github.com/Cecil-Zhang/AggieShell"
                   className="text-blueGray-500 hover:text-blueGray-800"
                 >
                   Wenchang Liu, Justin Xu, Shuxian Zhang, Zhixuan Li, Jinxiao Yu
